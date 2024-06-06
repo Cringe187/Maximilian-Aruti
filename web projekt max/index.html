@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Blog</title>
+</head>
+<body>
+    <img id="logo" src="WILDLIFE.png">
+    <div id="splashscreen">
+        <div id="loader-container">
+            <div id="loader"></div>
+        </div>
+    </div>
+
+
+    <script>
+        function splashscreen() {
+            setTimeout(function() {
+                window.location.href = 'website.html';
+            }, 4000);
+        }
+        window.onload = splashscreen;
+    </script>
+    
+
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #logo{
+            margin-top: -361px;
+
+        }
+
+        #splashscreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #loader-container {
+            width: 80%;
+            height: 10px;
+            background-color: #0707df;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        #loader {
+            width: 0;
+            height: 100%;
+            background-color: #c50808;
+            animation: load 4s linear forwards;
+        }
+
+        @keyframes load {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 100%;
+            }
+        }
+    </style>
+</body>
+</html>
